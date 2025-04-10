@@ -1,0 +1,136 @@
+/* Basic Reset */
+body, h1, h2, p, ul, li, a, img, i, svg /* Add svg for FontAwesome */ {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; /* Important for padding/margin */
+}
+
+body {
+  font-family: sans-serif; /* Or the font you identified */
+  background-color: #808080; /* Grey Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make it full height */
+  padding: 20px; /* Add some padding for smaller viewports */
+}
+
+.container {
+  width: 100%; /* Let it take full width within body padding */
+  max-width: 600px; /* Maximum width on larger screens */
+  margin: 0 auto;
+  /* padding: 20px; removed padding here, added to body */
+  text-align: center;
+  color: white; /* Set default text color for container */
+}
+
+.profile img {
+  width: 120px; /* Adjust the size */
+  height: 120px;
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Prevents distortion */
+  margin-bottom: 10px;
+  border: 3px solid white; /* Optional: add border like many link pages */
+}
+
+.profile h1 {
+  font-size: 1.5em; /* Adjust the size */
+  margin-bottom: 5px;
+  /* color: white; Inherited from .container */
+}
+
+.profile p {
+  font-size: 0.9em;
+  /* color: white; Inherited from .container */
+  margin-bottom: 20px; /* Increased margin */
+  padding: 0 10px; /* Add horizontal padding for wrapping text */
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Increased gap */
+  margin-bottom: 30px; /* Increased margin */
+}
+
+.socials a {
+  color: white;
+  font-size: 1.8em; /* Slightly larger icons */
+  text-decoration: none; /* Remove underlines */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect + slight scale */
+}
+
+.socials a:hover {
+  color: #ddd; /* Lighter color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.links {
+  display: flex;
+  flex-direction: column; /* Stack the links vertically */
+  gap: 15px; /* Space between links */
+}
+
+.link-button {
+  display: flex; /* Use flexbox for icon and text alignment */
+  align-items: center; /* Vertically align icon and text */
+  justify-content: center; /* Center content horizontally */
+  background-color: #000000; /* Black Button Background */
+  color: white; /* White Button Text */
+  padding: 15px 20px;
+  text-decoration: none; /* Remove underline */
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  position: relative; /* Needed for potential icon positioning */
+  overflow: hidden; /* Ensure content fits */
+}
+
+/* Style for the FontAwesome icons inside buttons */
+.link-button svg {
+  margin-right: 12px; /* Space between icon and text */
+  font-size: 1.2em; /* Adjust icon size */
+  width: 1.2em; /* Explicit width can help alignment */
+}
+
+.link-button:hover {
+  background-color: #333; /* Slightly darker on hover */
+  transform: scale(1.03); /* Slightly lift button on hover */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 480px) {
+  body {
+      padding: 15px; /* Less padding on small screens */
+  }
+  .profile img {
+      width: 100px;
+      height: 100px;
+  }
+  .profile h1 {
+      font-size: 1.3em;
+  }
+   .profile p {
+      font-size: 0.85em;
+  }
+  .socials {
+      gap: 20px;
+      margin-bottom: 25px;
+  }
+  .socials a {
+      font-size: 1.6em;
+  }
+  .link-button {
+      padding: 12px 15px;
+      font-size: 0.9em;
+  }
+  .link-button svg {
+       margin-right: 10px;
+       font-size: 1.1em;
+  }
+}
